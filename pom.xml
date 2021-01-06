@@ -20,6 +20,7 @@
         <module>eureka-service</module>
         <module>hello-client-server</module>
         <module>hello-client-service</module>
+        <module>zuul-service</module>
     </modules>
 
     <properties>

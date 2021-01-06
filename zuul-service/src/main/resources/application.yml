@@ -1,9 +1,19 @@
 spring:
   application:
-    name: hello-kur-service
+    name: zuul-service
 
 server:
-  port: 8072
+  port: 8073
+
+zuul:
+  prefix: /api
+  routes:
+    hello-kur-server:
+      path: /server/**
+      serviceId: HELLO-KUR-SERVER
+    hello-kur-service:
+      path: /client/**
+      serviceId: HELLO-KUR-SERVICE
 
 eureka:
   client:
@@ -14,10 +24,10 @@ eureka:
   instance:
     hostname: localhost
 
-# Increase the Hystrix timeout to 3s
+# Increase the Hystrix timeout to 3s (globally)
 hystrix:
   command:
-    fallback:
+    default:
       execution:
         isolation:
           thread:

@@ -2,7 +2,8 @@ spring:
   application:
     name: hello-kur-server
 
-server.port: 8071
+server:
+  port: 8071
 
 eureka:
   client:
