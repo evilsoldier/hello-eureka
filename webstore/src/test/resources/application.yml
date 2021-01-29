@@ -1,0 +1,15 @@
+eureka:
+  client:
+    enabled: false
+
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:${mariaDB4j.port}/test
+    username: root
+    password: password
+
+mariaDB4j:
+  port: 3306
+
+#spring.jpa.database-platform: org.hibernate.dialect.MySQL5InnoDBDialect

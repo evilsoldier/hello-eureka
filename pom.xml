@@ -21,6 +21,7 @@
         <module>hello-client-server</module>
         <module>hello-client-service</module>
         <module>zuul-service</module>
+        <module>webstore</module>
     </modules>
 
     <properties>
@@ -52,6 +53,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
